@@ -279,6 +279,10 @@ input[type = password]:valid {
     border: none;
 }
 
+#login {
+    background-color: black;
+}
+
 .log {
     padding-left: 90px;
 }
@@ -321,24 +325,41 @@ footer {
         transition: all ease 0.2s;
     }
 
-.volume {
+.volume, .timer {
     text-align: right;
+    display: flex;
+    align-items: flex-start;
 }
 
 .volumeIcon{
     font-size: 1.5em;
 }
 
-.timer {
-
-}
 
 #seekslider {
     width: 85%;
+    height: 4px !important;
+    margin-top: 11px;
 }
 
-#volumeSlider {
-    width: 70%;
+.slider {
+    width: 130px;
+    height: 4px !important;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 100;
+    outline: none;
+    position: relative;
+    margin-top: 11px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 2px !important;
+    border: red;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 @media (max-width: 1740px) {

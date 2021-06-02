@@ -10,6 +10,22 @@
     <title>MEASTR</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_maestr.png" alt="maestr" class="image d-inline-block align-bottom"/>
+                <div class="d-inline-block align-bottom baner">MAESTR</div>
+            </a>
+            <buttton class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hambmenu" aria-controls="hambmenu" aria-expanded="false" aria-label="Navigation button">
+                <span class="navbar-toggler-icon"></span>
+            </buttton>
+            <div class="collapse navbar-collapse justify-content-end" id="hambmenu">
+                <div class="navbar-nav">
+                    <hr/>
+                    <a class="nav-link login" id="login">Wyloguj się</a>                
+                </div>
+            </div>
+        </nav>
     <div class="main">
         <div class="container">
             <div class="row">
@@ -156,7 +172,7 @@
                     <button class="btn m-1"><span class="material-icons icon">replay</span></button>
                 </div>
             </section>
-            <section class="row" style="min-height: 60px!important;">  
+            <section class="row" style="min-height: 30px!important;">  
                 <div class="timer offset-md-3 col-md-6">
                     <span>00:00</span>
                     <input type="range" id="seekslider" min="0" max="100" value="0" step="1">
@@ -164,7 +180,7 @@
                 </div>
                 <div class="volume col-md-2">
                     <span class="material-icons icon volumeIcon">volume_up</span>
-                    <input type="range" name="slider" id="volumeSlider" min="0" max="100">
+                    <input type="range" class="slider"  id="volumeSlider" min="0" max="100">
                 </div>
             </section>
         </div>
