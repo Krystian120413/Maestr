@@ -14,6 +14,7 @@
                 <img src="img/logo_maestr.png" alt="maestr" class="image d-inline-block align-bottom"/>
                 <div class="d-inline-block align-bottom baner">MAESTR</div>
             </a>
+            <!--
             <buttton class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hambmenu" aria-controls="hambmenu" aria-expanded="false" aria-label="Navigation button">
                 <span class="navbar-toggler-icon"></span>
             </buttton>
@@ -28,6 +29,7 @@
                     <hr/>
                 </div>
             </div>
+        -->
         </nav>
     </header>
 <div class="container-fluid">
@@ -44,13 +46,13 @@
             <span class="title2">Sprawdź  teraz!</span>
         </div>
     </div>
-    <form action="userPanel.html">
+    <form action="login.php" method="POST">
     <div class="row">    
         <span class="title col-md-7">Najlepsza muzyka<br/>w jednym miejscu</span>
         <div class="col-md-4">
-            <input class="loginInput" type="text" placeholder="login" maxlength="50" minlength="6" required></input>
+            <input class="loginInput" name="email" type="email" placeholder="email" maxlength="50" minlength="6" required></input>
             <br/>
-            <input class="loginInput" type="password" placeholder="hasło" maxlength="50" minlength="6" required></input>
+            <input class="loginInput" name="passwd" type="password" placeholder="hasło" maxlength="50" minlength="6" required></input>
         </div>
     </div>
     <div class="row">
@@ -69,7 +71,7 @@
             <div class="rect12 rect"></div>
         </div>
         <div class="col-md-4 log">
-            <button class="login" type="submit">Zaloguj się</button>
+            <button id="login" type="submit">Zaloguj się</button>
             <br/>
             <span>Nie masz konta? <a href="#"><u>Zarejestruj się</u></a></span>
         </div>
