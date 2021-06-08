@@ -10,7 +10,7 @@
     $row = $_POST['row'];
     
     $query = "DELETE from users WHERE email = '".$row."'";
-    $result = mysqli_query($connection, $query);        
+    $result = mysqli_query($connection, $query);  
 
 
     if($result){      

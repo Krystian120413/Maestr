@@ -52,19 +52,22 @@
                         include 'databaseconnect.php';
                         $query = 'SELECT id, title, author, source, poster_source FROM songs';
                         $result_set = mysqli_query($connection, $query);
+                        $i = 0;
                         while($row = mysqli_fetch_assoc($result_set)){
                 ?>
                             <div class="col-md-3 cover">
                                 <?php
-                                    echo "<img src='".$row['poster_source']."' class='album-poster poster-img' alt='cover' id='".$row['id']."'>";
-                                    echo "<div id='musicSrc".$row['id']."' style='display:none;'>".$row['source']."</div>";
+                                    echo "<img src='".$row['poster_source']."' class='album-poster poster-img' alt='cover' id='".$i."'>";
+                                    echo "<div id='musicSrc".$i."' style='display:none;'>".$row['source']."</div>";
+                                    echo "<div id='id".$i."' style='display:none;'>".$row['id']."</div>";
                                 ?>
                                 <?php
-                                echo "<h4 id='title".$row['id']."'>".$row['title']."</h4>";
-                                echo "<p id='p".$row['id']."'>".$row['author']."</p>";
+                                echo "<h4 id='title".$i."'>".$row['title']."</h4>";
+                                echo "<p id='p".$i."'>".$row['author']."</p>";
                                 ?>
                             </div>
                 <?php
+                            $i++;
                         }
                     }
                 ?>

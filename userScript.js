@@ -1,8 +1,3 @@
-let agent = navigator.userAgent.toLowerCase();
-let ext = (agent.indexOf('firefox') != -1 || agent.indexOf('opera') != -1) ? '.ogg' : '.mp3';
-
-const albumPosters = Array.from(document.getElementsByClassName('album-poster'));
-
 const playBtn = document.getElementById('playBtn');
 const playIcon = document.getElementById('playIcon');
 const previousBtn = document.getElementById('previousBtn');
@@ -27,6 +22,7 @@ const audio = new Audio();
 
 let id;
 let poster;
+let songId = null;
 let replay = false;
 let shuffle = false;
 audio.volume = volumeSlider.value / 100;
@@ -72,9 +68,9 @@ const songPlaying = () => {
 
     if(audio.ended){
         if(shuffle){
-            let rand = Math.floor(Math.random() * albumPosters.length);
+            let rand = Math.floor(Math.random() * posters.length);
             if(rand === id){
-                if(id === albumPosters.length) id = rand - 1;
+                if(id === posters.length) id = rand - 1;
                 else id = rand + 1;
             }
             else id = rand;
@@ -88,12 +84,11 @@ const songPlaying = () => {
 
 //play next song
 const playNext = () => {
-    console.log(id);
     if(document.getElementById('title') + id == null) {
         ++id
         return playNext();
     };
-    if(id >= albumPosters.length){
+    if(id >= posters.length){
         id = 0;
         return playNext();
     }
@@ -101,6 +96,7 @@ const playNext = () => {
     const au = document.getElementById('p' + id).innerText;
     const src = document.getElementById('musicSrc' + id).innerText;
 
+    songId = document.getElementById('id' + id).innerText;
     audio.src = src;
     audio.play();
     playIcon.innerText = 'pause_circle_filled';
@@ -152,9 +148,9 @@ seekSlider.addEventListener('input', () => {
 //next button
 nextBtn.addEventListener('click', () => {
     if(shuffle){
-        let rand = Math.floor(Math.random() * albumPosters.length);
+        let rand = Math.floor(Math.random() * posters.length);
         if(rand === id){
-            if(id === albumPosters.length) id = rand - 1;
+            if(id === posters.length) id = rand - 1;
             else id = rand + 1;
         }
         else id = rand;
