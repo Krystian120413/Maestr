@@ -27,7 +27,7 @@
                         if(isset($_SESSION['Authenticated']) && ($_SESSION['Authenticated'] == 1)){
                     ?>
                             <select name="userAction" id="userAction" class="nav-link login" onchange="location = this.value;">
-                                <option value="newMusic.php" selected>Odkrywaj nowe utwory</option>
+                                <option value="adminPanel.php" selected>Wszystkie utwory</option>
                                 <option value="addSong.php">Dodaj nowe utwory</option>
                                 <option value="seeUsers.php">Zobacz użytkowników</option>
                             </select>        
@@ -46,32 +46,22 @@
                     if(isset($_SESSION['Authenticated']) && ($_SESSION['Authenticated'] == 1)){
                 ?>
                     <div class="col-md-12">
-                        <h3>Twoje ulubione utwory</h3>
+                        <h3>Wszystkie utwory</h3>
                     </div>
                     <?php
-                        $ciastka = $_COOKIE['ciastka'];
-                        $ciastka = stripslashes($ciastka);
-                        $ciastka = unserialize($ciastka);
-
-                        $email = $ciastka['email'];
-
                         include 'databaseconnect.php';
-                        $query = "SELECT songs.id, songs.title, songs.author, songs.source, songs.poster_source 
-                        FROM songs 
-                        inner join usersongs 
-                        on usersongs.song_id = songs.id 
-                        where usersongs.user_email = '".$email."'";
+                        $query = 'SELECT id, title, author, source, poster_source FROM songs';
                         $result_set = mysqli_query($connection, $query);
                         while($row = mysqli_fetch_assoc($result_set)){
-                    ?>
+                ?>
                             <div class="col-md-3 cover">
                                 <?php
                                     echo "<img src='".$row['poster_source']."' class='album-poster poster-img' alt='cover' id='".$row['id']."'>";
                                     echo "<div id='musicSrc".$row['id']."' style='display:none;'>".$row['source']."</div>";
                                 ?>
                                 <?php
-                                    echo "<h4 id='title".$row['id']."'>".$row['title']."</h4>";
-                                    echo "<p id='p".$row['id']."'>".$row['author']."</p>";
+                                echo "<h4 id='title".$row['id']."'>".$row['title']."</h4>";
+                                echo "<p id='p".$row['id']."'>".$row['author']."</p>";
                                 ?>
                             </div>
                 <?php
@@ -88,7 +78,7 @@
     <footer class="fixed-bottom" id="footer">
         <div class="container pb-0">
             <section>
-                <div class="buttons col-md-12">
+                <div class="buttons col-sm-12">
                     <button class="btn m-1" id="shuffleBtn"><span class="material-icons icon" id="shuffleIcon">shuffle</span></button>
                     <button class="btn m-1" id="previousBtn"><span class="material-icons icon">skip_previous</span></button>
                     <button class="btn m-1" id="playBtn"><span class="material-icons icon" id="playIcon">pause_circle_filled</span></button>
@@ -97,20 +87,20 @@
                 </div>
             </section>
             <section class="row" style="min-height: 30px!important;">
-                <img id="miniPoster" class="col-md-1">
-                <div class="col-md-2" style="max-height:50px;">
+                <img id="miniPoster" class="col-sm-1">
+                <div class="col-sm-2" style="max-height:50px;">
                     <h5 id="title"></h5>
                     <p id="author"></p>
                 </div>
-                <div class="col-md-1">
-                    <span class="material-icons icon" id="addIcon">remove_circle</span>
+                <div class="col-sm-1">
+                    <span class="material-icons icon" id="addIcon"></span>
                 </div>
-                <div class="timer col-md-5">
+                <div class="timer col-sm-5">
                     <span id="songTime">00:00</span>
                     <input type="range" id="seekSlider" min="0" value="0" step="0.01">
                     <span id="fullSongTime">00:00</span>
                 </div>
-                <div class="volume col-md-2">
+                <div class="volume col-sm-2">
                     <span class="material-icons icon volumeIcon" id="volumeIcon">volume_up</span>
                     <input type="range" class="slider" value="40"  id="volumeSlider" min="0" max="100">
                 </div>

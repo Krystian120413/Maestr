@@ -37,11 +37,12 @@
     }
     else if(isset($_GET['logout'])){
         session_destroy();
-        header('Location: index_d.html');
+        header('Location: index.html');
         setcookie('ciastka', '', time() - 3600);
+        mysqli_close($connection);
     }
     else {
         session_destroy();
-        header('Location: index_d.html');
+        header('Location: index.html');
     }
 ?>

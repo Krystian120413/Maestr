@@ -243,7 +243,7 @@ p {
     display: inline-block;
 }
 
-input[type = email] {
+input[type = email], input[type = text], input[type = file]  {
     background-color: #040705;
     border: #fff solid 3px;
     border-radius: 64px;
@@ -251,7 +251,7 @@ input[type = email] {
     outline: none;
 }
 
-input[type = email]:valid {
+input[type = email]:valid, input[type = text]:valid, input[type = file]:valid {
     color: #fff;
 }
 
@@ -271,6 +271,20 @@ input[type = password]:valid {
     width: 500px;
     padding-left: 40px;
     color: #A4A4A4;
+}
+
+.registerInput {
+    width: 500px !important;
+    color: #A4A4A4;
+    font-size: 1.2em;
+}
+
+    .registerInput:focus {
+        background-color: #000;   
+    }
+
+#register {
+    cursor: pointer;
 }
 
 #login {
@@ -296,6 +310,7 @@ input[type = password]:valid {
 
 .log {
     padding-left: 90px;
+    padding-top: 20px;
 }
 
     .log span {
@@ -305,6 +320,15 @@ input[type = password]:valid {
         .log a {
             color: #fff;
         }
+
+table {
+    font-size: 2em;
+    text-align: center;
+}
+
+td {
+    border: 2px solid #fff;
+}
 
 footer {
     position: fixed;
@@ -318,12 +342,11 @@ footer {
 }
 
 #miniPoster {
-    width: 60px;
-    height: 60px;
-    
+    width: 50px;
+    max-height: 50px;
 }
 
-#addIcon {
+#addIcon, #removeIcon {
     font-size: 1.6em;
 }
 
@@ -485,6 +508,10 @@ footer {
         margin-top: -13px;
     }
 
+    .image {
+        transform: scale(0.85);
+    }
+
     .nav-link {
         font-size: 1.7em;
     }
@@ -504,7 +531,7 @@ footer {
         transform: scale(0.7) rotate(45deg);
     }
 
-    input[type = email] {
+    input[type = email], input[type = text], input[type = file]  {
         width: 300px;
         height: 50px;
     }
@@ -528,4 +555,12 @@ footer {
         .log a {
             padding-left: 35px;
         }
+
+    table {
+        font-size: 1.4em;
+    }
+
+    .row {
+        min-height: 50px;
+    }
 }

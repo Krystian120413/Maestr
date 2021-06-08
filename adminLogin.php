@@ -29,11 +29,11 @@
     else if(isset($_GET['logout'])){
         session_destroy();
         setcookie('ciastka', '', time() - 3600);
-        header('Location: index_d.html'); 
+        header('Location: index.html'); 
     }
     else {
         session_destroy();
         setcookie('ciastka', '', time() - 3600);
-        header('Location: index_d.html');
+        header('Location: index.html');
     }
 ?>

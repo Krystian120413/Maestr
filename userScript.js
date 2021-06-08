@@ -39,6 +39,24 @@ const selectToPlay = () => {
     });
 }
 
+posters.forEach((pos, index) => {
+    if(index != id){
+        pos.addEventListener('mouseover', () => {
+            pos.style.boxShadow = 'none';
+            pos.style.transform = 'scale(0.98) translateY(5px)';
+        });
+    }
+});
+
+posters.forEach((po, index) => {
+    po.addEventListener('mouseleave', () => {
+        if(index != id){
+            po.style.boxShadow = '0 15px 35px #2d8173';
+            po.style.transform = 'none';
+        }
+    });
+});
+
 const songPlaying = () => {
 
     let s = parseInt(audio.currentTime % 60) < 10 ? "0" + parseInt(audio.currentTime % 60) : parseInt(audio.currentTime % 60);
@@ -54,7 +72,7 @@ const songPlaying = () => {
 
     if(audio.ended){
         if(shuffle){
-            let rand = Math.floor(Math.random() * albumPosters.length) + 1;
+            let rand = Math.floor(Math.random() * albumPosters.length);
             if(rand === id){
                 if(id === albumPosters.length) id = rand - 1;
                 else id = rand + 1;
@@ -62,16 +80,23 @@ const songPlaying = () => {
             else id = rand;
         }
         else {
-            if(!replay) ++id;
-            if(id > albumPosters.length) id = 1;    
+            if(!replay) ++id;  
         }
         playNext();
-    }
-    
+    }   
 }
 
 //play next song
 const playNext = () => {
+    console.log(id);
+    if(document.getElementById('title') + id == null) {
+        ++id
+        return playNext();
+    };
+    if(id >= albumPosters.length){
+        id = 0;
+        return playNext();
+    }
     const tit = document.getElementById('title' + id).innerText;
     const au = document.getElementById('p' + id).innerText;
     const src = document.getElementById('musicSrc' + id).innerText;
@@ -127,7 +152,7 @@ seekSlider.addEventListener('input', () => {
 //next button
 nextBtn.addEventListener('click', () => {
     if(shuffle){
-        let rand = Math.floor(Math.random() * albumPosters.length) + 1;
+        let rand = Math.floor(Math.random() * albumPosters.length);
         if(rand === id){
             if(id === albumPosters.length) id = rand - 1;
             else id = rand + 1;
@@ -135,15 +160,14 @@ nextBtn.addEventListener('click', () => {
         else id = rand;
     }
     else {
-        ++id;
-        if(id > albumPosters.length) id = 1;    
+        ++id;   
     }
     playNext();
 });
 
 //previous button
 previousBtn.addEventListener('click', () => {
-    if(id > 1) --id;
+    if(id > 0) --id;
     playNext();
 })
 
