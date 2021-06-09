@@ -24,7 +24,7 @@ addIcon.addEventListener('click', () => {
 
             setTimeout(() => {
                 document.getElementById('message').innerText = '';
-            document.getElementById('message').style.display = 'none';
+                document.getElementById('message').style.display = 'none';
             }, 2000);
         }
     }

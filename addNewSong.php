@@ -21,9 +21,11 @@
 
     function saveAudio($audioFileName, $posterFileName){
         include 'databaseconnect.php';
+
         global $title, $author;
 
-        $query = "INSERT INTO songs(title, author, source, poster_source) VALUES('{$title}', '{$author}', '{$audioFileName}', '{$posterFileName}')";
+        $query = "INSERT INTO `songs`(`title`, `author`, `source`, `poster_source`) 
+        VALUES('".$title."', '".$author."', '".$audioFileName."', '".$posterFileName."')";
         mysqli_query($connection, $query);
 
         if(mysqli_affected_rows($connection) > 0){

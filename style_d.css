@@ -1,511 +1,444 @@
-@media (min-width: 1081px){
-    body {
-        background-color: #052925;
-        padding: 0;
-        margin: 0;
-        color: #fff;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    background-color: #052925;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    padding:  40px 0;
+}
+
+#mobile {
+    display: none;
+}
+
+.cover {
+    margin-bottom: 40px;
+}
+
+.album-poster {
+    position: relative;
+    display: block;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px #2d8173;
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+    .album-poster:hover {
+        box-shadow: none;
+        transform: scale(0.98) translateY(5px);
     }
 
-    .main {
-        padding:  40px 0;
+h3 {
+    font-size: 54px;
+    margin-bottom: 34px;
+    border-bottom: 4px solid #083830;
+    padding-bottom: 15px;
+}
+
+h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+}
+
+.bg-dark {
+    background-color: #000!important;
+    height: 120px;
+}
+
+.nav-link {
+    font-size: 1.3em;
+    padding-left: 50px!important;
+    font-size: 2em;
+}
+
+.row {
+    min-height: 200px;
+    /*border: 4px solid black;*/
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+}
+
+.poster-img {
+    width: 100%;
+    min-height: 250px;
+}
+
+.playlist-img {
+    max-height: 120px;
+}
+
+.baner {
+    font-size: 70px;
+    padding-bottom: 10px;
+}
+
+#hambmenu {
+    background-color: #000;
+}
+
+.title {
+    font-size: 6em;
+    padding-left: 100px;
+    line-height: 120px;
+}
+
+.title2 {
+    font-size: 3.7em;
+    vertical-align: bottom;
+}
+
+/*circle positions*/
+    .circle1 {
+        position: inherit;
+        top: 170px;
+        left: 10px;
     }
 
-    #mobile {
-        display: none;
+    .circle2 {
+        position: inherit;
+        top: 130px;
+        left: -50px;
     }
 
-    .cover {
-        margin-bottom: 40px;
+    .circle3 {
+        position: inherit;
+        top: 95px;
+        left: -10px;
     }
 
-    .album-poster {
-        position: relative;
-        display: block;
-        border-radius: 7px;
-        overflow: hidden;
-        box-shadow: 0 15px 35px #2d8173;
-        transition: all ease 0.4s;
-        cursor: pointer;
+    .circle4 {
+        position: inherit;
+        top: 130px;
+        left: -50px;
     }
 
-        .album-poster:hover {
-            box-shadow: none;
-            transform: scale(0.98) translateY(5px);
+    .circle5 {
+        position: inherit;
+        top: 130px;
+        left: 55px;
+    }
+
+    .circle6 {
+        position: inherit;
+        top: 110px;
+        left: 30px;
+    }
+
+.circle {
+    height: 120px;
+    width: 120px;
+    border-radius: 360px;
+    position: relative;
+    display: inline-block;
+}
+
+.blueCircle {
+    background-color: rgba(0, 177, 255, 0.24);
+    filter:brightness(110%);
+    backdrop-filter: blur(6px);
+}
+
+.pinkCircle {
+    background-color: rgba(255, 0, 221, 0.24);
+    filter:brightness(110%);
+    backdrop-filter: blur(6px);
+}
+
+.dBlueCircle {
+    background-color: rgba(58, 0, 255, 0.24);
+    filter:brightness(110%);
+    backdrop-filter: blur(6px);
+}
+
+/*circle positions*/
+    .rect1 {
+        top: 30px;
+        transform: rotate(56deg);
+    }
+
+    .rect2 {
+        top: -13px;
+        left: -45px;
+        transform: rotate(69deg);
+    }
+
+    .rect3 {
+        top: -22px;
+        left: -100px;
+        transform: rotate(7deg);
+    }
+
+    .rect4 {
+        top: -7px;
+        left: -150px;
+        transform: rotate(24deg);
+    }
+
+    .rect5 {
+        top: 25px;
+        left: -210px;
+        transform: rotate(33deg);
+    }
+
+    .rect6 {
+        top: 42px;
+        left: -270px;
+        transform: rotate(23deg);
+    }
+
+    .rect7 {
+        top: 60px;
+        left: -320px;
+        transform: rotate(3deg);
+    }
+
+    .rect8 {
+        top: 40px;
+        left: -370px;
+        transform: rotate(-16deg);
+    }
+
+    .rect9 {
+        top: -130px;
+        left: 565px;
+        transform: rotate(-35deg);
+    }
+
+    .rect10 {
+        top: -200px;
+        left: 500px;
+        transform: rotate(39deg);
+    }
+
+    .rect11 {
+        top: -270px;
+        left: 410px;
+        transform: rotate(30deg);
+    }
+
+    .rect12 {
+        top: -340px;
+        left: 310px;
+        transform: rotate(25deg);
+    }
+
+.rect {
+    background-color: rgba(255, 255, 255, 0.24);
+    height: 120px;
+    width: 120px;
+    border-radius: 24px;
+    position: relative;
+    filter:brightness(110%);
+    backdrop-filter: blur(6px);
+    display: inline-block;
+}
+
+input[type = email], input[type = text], input[type = file]  {
+    background-color: #040705;
+    border: #fff solid 3px;
+    border-radius: 64px;
+    height: 80px;
+    outline: none;
+}
+
+input[type = email]:valid, input[type = text]:valid, input[type = file]:valid {
+    color: #fff;
+}
+
+input[type = password] {
+    background-color: #040705;
+    border: #fff solid 3px;
+    border-radius: 64px;
+    height: 80px;
+    outline: none;
+}
+
+input[type = password]:valid {
+    color: #fff;
+}
+
+.loginInput {
+    width: 500px;
+    padding-left: 40px;
+    color: #A4A4A4;
+}
+
+.registerInput {
+    width: 500px !important;
+    color: #A4A4A4;
+    font-size: 1.2em;
+}
+
+    .registerInput:focus {
+        background-color: #000;   
+    }
+
+#register {
+    cursor: pointer;
+}
+
+#login {
+    width: 360px;
+    height: 70px;
+    border-radius: 42px;
+    background-color: #008FEF;
+    color: #fff;
+    font-size: 1.75em;
+    padding-bottom: 6px;
+    border: none;
+}
+
+#userAction {
+    min-width: 260px;
+}
+
+.login {
+    background-color: black;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.log {
+    padding-left: 90px;
+    padding-top: 20px;
+}
+
+    .log span {
+        padding-left: 75px;
+    }
+
+        .log a {
+            color: #fff;
         }
 
-    h3 {
-        font-size: 54px;
-        margin-bottom: 34px;
-        border-bottom: 4px solid #083830;
-        padding-bottom: 15px;
+table {
+    font-size: 2em;
+    text-align: center;
+}
+
+td {
+    border: 2px solid #fff;
+}
+
+#message {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(59, 59, 59);
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 1.5em;
+    display: none;
+}
+
+footer {
+    position: fixed;
+    height: 160px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#miniPoster {
+    width: 50px;
+    max-height: 50px;
+}
+
+#addIcon, #removeIcon {
+    font-size: 1.6em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    background-color: rgb(24, 24, 24);
+    font-size: 2.2em;
+    color: #fff;
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+    .icon:hover {
+        color: rgb(190, 190, 190);
+        transition: all ease 0.2s;
     }
 
-    h4 {
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: 15px;
-        font-weight: 700;
-    }
+.volume, .timer {
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+}
 
-    p {
-        font-size: 15px;
-    }
-
-    .bg-dark {
-        background-color: #000!important;
-        height: 120px;
-    }
-
-    .nav-link {
-        font-size: 1.3em;
-        padding-left: 50px!important;
-        font-size: 2em;
-    }
-
-    .row {
-        min-height: 200px;
-        /*border: 4px solid black;*/
-    }
-
-    .image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .poster-img {
-        width: 100%;
-        min-height: 250px;
-    }
-
-    .playlist-img {
-        max-height: 120px;
-    }
-
-    .baner {
-        font-size: 70px;
-        padding-bottom: 10px;
-    }
-
-    #hambmenu {
-        background-color: #000;
-    }
-
-    .title {
-        font-size: 6em;
-        padding-left: 100px;
-        line-height: 120px;
-    }
-
-    .title2 {
-        font-size: 3.7em;
-        vertical-align: bottom;
-    }
-
-    /*circle positions*/
-        .circle1 {
-            position: inherit;
-            top: 170px;
-            left: 10px;
-        }
-
-        .circle2 {
-            position: inherit;
-            top: 130px;
-            left: -50px;
-        }
-
-        .circle3 {
-            position: inherit;
-            top: 95px;
-            left: -10px;
-        }
-
-        .circle4 {
-            position: inherit;
-            top: 130px;
-            left: -50px;
-        }
-
-        .circle5 {
-            position: inherit;
-            top: 130px;
-            left: 55px;
-        }
-
-        .circle6 {
-            position: inherit;
-            top: 110px;
-            left: 30px;
-        }
-
-    .circle {
-        height: 120px;
-        width: 120px;
-        border-radius: 360px;
-        position: relative;
-        display: inline-block;
-    }
-
-    .blueCircle {
-        background-color: rgba(0, 177, 255, 0.24);
-        filter:brightness(110%);
-        backdrop-filter: blur(6px);
-    }
-
-    .pinkCircle {
-        background-color: rgba(255, 0, 221, 0.24);
-        filter:brightness(110%);
-        backdrop-filter: blur(6px);
-    }
-
-    .dBlueCircle {
-        background-color: rgba(58, 0, 255, 0.24);
-        filter:brightness(110%);
-        backdrop-filter: blur(6px);
-    }
-
-    /*circle positions*/
-        .rect1 {
-            top: 30px;
-            transform: rotate(56deg);
-        }
-
-        .rect2 {
-            top: -13px;
-            left: -45px;
-            transform: rotate(69deg);
-        }
-
-        .rect3 {
-            top: -22px;
-            left: -100px;
-            transform: rotate(7deg);
-        }
-
-        .rect4 {
-            top: -7px;
-            left: -150px;
-            transform: rotate(24deg);
-        }
-
-        .rect5 {
-            top: 25px;
-            left: -210px;
-            transform: rotate(33deg);
-        }
-
-        .rect6 {
-            top: 42px;
-            left: -270px;
-            transform: rotate(23deg);
-        }
-
-        .rect7 {
-            top: 60px;
-            left: -320px;
-            transform: rotate(3deg);
-        }
-
-        .rect8 {
-            top: 40px;
-            left: -370px;
-            transform: rotate(-16deg);
-        }
-
-        .rect9 {
-            top: -130px;
-            left: 565px;
-            transform: rotate(-35deg);
-        }
-
-        .rect10 {
-            top: -200px;
-            left: 500px;
-            transform: rotate(39deg);
-        }
-
-        .rect11 {
-            top: -270px;
-            left: 410px;
-            transform: rotate(30deg);
-        }
-
-        .rect12 {
-            top: -340px;
-            left: 310px;
-            transform: rotate(25deg);
-        }
-
-    .rect {
-        background-color: rgba(255, 255, 255, 0.24);
-        height: 120px;
-        width: 120px;
-        border-radius: 24px;
-        position: relative;
-        filter:brightness(110%);
-        backdrop-filter: blur(6px);
-        display: inline-block;
-    }
-
-    input[type = email], input[type = text], input[type = file]  {
-        background-color: #040705;
-        border: #fff solid 3px;
-        border-radius: 64px;
-        height: 80px;
-        outline: none;
-    }
-
-    input[type = email]:valid, input[type = text]:valid, input[type = file]:valid {
-        color: #fff;
-    }
-
-    input[type = password] {
-        background-color: #040705;
-        border: #fff solid 3px;
-        border-radius: 64px;
-        height: 80px;
-        outline: none;
-    }
-
-    input[type = password]:valid {
-        color: #fff;
-    }
-
-    .loginInput {
-        width: 500px;
-        padding-left: 40px;
-        color: #A4A4A4;
-    }
-
-    .registerInput {
-        width: 500px !important;
-        color: #A4A4A4;
-        font-size: 1.2em;
-    }
-
-        .registerInput:focus {
-            background-color: #000;   
-        }
-
-    #register {
-        cursor: pointer;
-    }
-
-    #login {
-        width: 360px;
-        height: 70px;
-        border-radius: 42px;
-        background-color: #008FEF;
-        color: #fff;
-        font-size: 1.75em;
-        padding-bottom: 6px;
-        border: none;
-    }
-
-    #userAction {
-        min-width: 260px;
-    }
-
-    .login {
-        background-color: black;
-        cursor: pointer;
-        margin-right: 20px;
-    }
-
-    .log {
-        padding-left: 90px;
-        padding-top: 20px;
-    }
-
-        .log span {
-            padding-left: 75px;
-        }
-
-            .log a {
-                color: #fff;
-            }
-
-    table {
-        font-size: 2em;
-        text-align: center;
-    }
-
-    td {
-        border: 2px solid #fff;
-    }
-
-    #message {
-        position: absolute;
-        top: 40%;
-        left: 40%;
-        width: 300px;
-        height: 100px;
-        background-color: rgb(59, 59, 59);
-        border: 2px solid #fff;
-        text-align: center;
-        font-size: 1.5em;
-        display: none;
-    }
-
-    footer {
-        position: fixed;
-        height: 160px;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(24, 24, 24);
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
-
-    #miniPoster {
-        width: 50px;
-        max-height: 50px;
-    }
-
-    #addIcon, #removeIcon {
-        font-size: 1.6em;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-    }
-
-    .icon {
-        background-color: rgb(24, 24, 24);
-        font-size: 2.2em;
-        color: #fff;
-        border: none;
-        margin-left: 15px;
-        margin-right: 15px;
-        cursor: pointer;
-    }
-
-        .icon:hover {
-            color: rgb(190, 190, 190);
-            transition: all ease 0.2s;
-        }
-
-    .volume, .timer {
-        text-align: right;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .volumeIcon{
-        font-size: 1.5em;
-    }
+.volumeIcon{
+    font-size: 1.5em;
+}
 
 
-    #seekSlider {
-        width: 85%;
-        height: 4px !important;
-        margin-top: 11px;
-    }
+#seekSlider {
+    width: 85%;
+    height: 4px !important;
+    margin-top: 11px;
+}
 
-    .slider {
-        width: 130px;
-        height: 4px !important;
-        border-radius: 10px;
-        background-color: #fff;
-        z-index: 100;
-        outline: none;
-        position: relative;
-        margin-top: 11px;
-    }
+.slider {
+    width: 130px;
+    height: 4px !important;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 100;
+    outline: none;
+    position: relative;
+    margin-top: 11px;
+}
 
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 10px;
-        height: 2px !important;
-        border: red;
-        background-color: aqua;
-        border-radius: 50%;
-        cursor: pointer;
-        transform: scale(1);
-    }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 2px !important;
+    border: red;
+    background-color: aqua;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1);
 }
 
 @media (max-width: 1740px) {
     .row {
         transform: scale(0.9);
     }
-
-    .rect9 {
-        top: -110px;
-        left: 380px;
-    }
-
-    .rect10 {
-        top: -180px;
-        left: 310px;
-    }
-
-    .rect11 {
-        top: -240px;
-        left: 230px;
-    }
-
-    .rect12 {
-        top: -310px;
-        left: 130px;
-    }
 }
 
 @media (max-width: 1528px) {
-
     .title {
         font-size: 4em;
-    }
-
-    .rect9 {
-        top: -80px;
-        left: 160px;
-    }
-
-    .rect10 {
-        top: -120px;
-        left: 100px;
-    }
-
-    .rect11 {
-        top: -170px;
-        left: 30px;
-    }
-
-    .rect12 {
-        top: -220px;
-        left: -50px;
     }
 }
 
 @media (max-width: 1312px) {
-    .rect {
-        display: none;
-    }
-
-    .rect9 {
-        top: -80px;
-        left: 160px;
-    }
-
-    .rect10 {
-        top: -120px;
-        left: 100px;
-    }
-
-    .rect11 {
-        top: -170px;
-        left: 30px;
-    }
-
-    .rect12 {
-        top: -220px;
-        left: -50px;
-    }
-
     input {
         transform: scale(0.84);
     }
@@ -518,94 +451,19 @@
     .title2 {
         font-size: 3em;
     }
-}
-
-
-/*mobile css*/
-@media (max-width: 1080px){
-    body {
-        background-color: #052925;
-        padding: 0;
-        margin: 0;
-        color: #fff;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-
-    .bg-dark {
-        background-color: #000!important;
-    }
-
-    .nav-link {
-        font-size: 1.8rem;
-        padding-left: 10px!important;
-    }
-
-    .break::after {
-        content: "\a";
-        white-space: pre;
-    }
-    .title {
-        margin-top: 1rem;
-        font-size: 5.3rem;
-        margin-left: -30px;
-    }
 
     .image {
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
     }
+}
 
-    .baner {
-        font-size: 35px;
-    }
-
-    .rectm {
-        background-color: rgba(255, 255, 255, 0.24);
-        height: 105px;
-        width: 105px;
-        border-radius: 24px;
-        transform: rotate(45deg);
-        position: relative;
-        filter:brightness(110%);
-        backdrop-filter: blur(6px);
-    }
-
-        .rectm1 {
-            top: -240px;
-            left: 215px;
-        }
-
-        .rectm2 {
-            top: -180px;
-            left: 140px;
-        }
-
-        .rectm3 {
-            top: -125px;
-            left: 15px;
-        }
-
-    .butt {
-        border-radius: 1.5rem;
-        font-size: 1.8rem;
-        height: 65px;
-        margin-bottom: 5%;
-        position: relative;
-        top: -60px;
-    }
-
-    .loginm {
-        background-color: #008FEF;
-        color: #fff;
+@media (max-width: 700px){
+    .row {
+        min-height: 50px;
     }
     
-    .registerm {
-        background-color: #A89203;
-        color: #fff;
-    }
-
-    #loginDiv {
-        font-size: 2rem;
+    table {
+        font-size: 1.2em;
     }
 }

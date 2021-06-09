@@ -97,7 +97,7 @@
     <footer class="fixed-bottom" id="footer">
         <div class="container pb-0">
             <section>
-                <div class="buttons col-sm-12">
+                <div class="buttons col-12">
                     <button class="btn m-1" id="shuffleBtn"><span class="material-icons icon" id="shuffleIcon">shuffle</span></button>
                     <button class="btn m-1" id="previousBtn"><span class="material-icons icon">skip_previous</span></button>
                     <button class="btn m-1" id="playBtn"><span class="material-icons icon" id="playIcon">pause_circle_filled</span></button>
@@ -106,20 +106,20 @@
                 </div>
             </section>
             <section class="row" style="min-height: 30px!important;">
-                <img id="miniPoster" class="col-sm-1">
-                <div class="col-sm-2" style="max-height:50px;">
+                <img id="miniPoster" class="col-1">
+                <div class="col-2" style="max-height:50px;">
                     <h5 id="title"></h5>
                     <p id="author"></p>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-1">
                     <span class="material-icons icon" id="removeIcon" data-toggle="tooltip" data-placement="top" title="Usuń z ulubionych utworów">remove_circle</span>
                 </div>
-                <div class="timer col-sm-5">
+                <div class="timer col-5">
                     <span id="songTime">00:00</span>
                     <input type="range" id="seekSlider" min="0" value="0" step="0.01">
                     <span id="fullSongTime">00:00</span>
                 </div>
-                <div class="volume col-sm-2">
+                <div class="volume col-2">
                     <span class="material-icons icon volumeIcon" id="volumeIcon">volume_up</span>
                     <input type="range" class="slider" value="40"  id="volumeSlider" min="0" max="100">
                 </div>
