@@ -14,25 +14,10 @@
                 <img src="img/logo_maestr.png" alt="maestr" class="image d-inline-block align-bottom"/>
                 <div class="d-inline-block align-bottom baner">MAESTR</div>
             </a>
-            <!--
-            <buttton class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hambmenu" aria-controls="hambmenu" aria-expanded="false" aria-label="Navigation button">
-                <span class="navbar-toggler-icon"></span>
-            </buttton>
-            <div class="collapse navbar-collapse" id="hambmenu">
-                <div class="navbar-nav">
-                    <hr/>
-                    <a class="nav-link" href="#">Nasza oferta</a>
-                    <hr/>
-                    <a class="nav-link" href="#">Aktualności</a>
-                    <hr/>
-                    <a class="nav-link" href="#">Newsletter</a>
-                    <hr/>
-                </div>
-            </div>
-        -->
         </nav>
     </header>
 <div class="container-fluid">
+<div id="cont">
     <div class="row">
         <div class="col-md-7">
             <div class="circle1 circle blueCircle"></div>
@@ -79,7 +64,73 @@
     </div>
 </form>
 </div>
+<div id="mobile">
+    <div id="mobileCont">
+        <div class="row no-gutters">
+            <figcaption class="title"><span class="break2"><span class="break">Najlepsza </span><span class="break">muzyka </span></span>w <span class="break">jednym </span><span class="break">miejscu</span></figcaption>
+            <div class="rectm rectm1"></div>
+            <div class="rectm rectm2"></div>
+            <div class="rectm rectm3"></div>
+        </div>
+        <div class="row">
+            <button class="butt loginm btn btn-lg d-grip gap-2 col-8 mx-auto" id="loginBtn">Zaloguj się</button>
+        </div>
+        <div class="row">
+            <button class="butt registerm btn btn-lg d-grip gap-2 col-8 mx-auto" id="registerBtn">Załóż konto</button>
+        </div>
+    </div>
+    <div id="loginDiv" style="display:none">
+        <div class="row">
+            <button class="btn btn-lg d-grip gap-2 col-8 mx-auto" id="closeLoginBtn">Close</button>
+        </div>
+        <div class="row">
+            <form action="login.php" method="post">
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email" maxlength="50" minlength="6" required>
+                </div>
+                <div class="form-row">
+                    <label for="passswd">Email:</label>
+                    <input type="password" name="passwd" placeholder="Hasło" maxlength="50" minlength="6" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Zaloguj się</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="registerDiv" style="display:none">
+        <div class="row">
+            <button class="btn btn-lg d-grip gap-2 col-8 mx-auto" id="closeRegisterBtn">Close</button>
+        </div>
+        <div class="row">
+            <form action="register.php" method="post">
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email" maxlength="50" minlength="6" required>
+                </div>
+                <div class="form-row">
+                    <label for="passwd">Hasło:</label>
+                    <input type="password" name="passwd" placeholder="Hasło" maxlength="50" minlength="6" required>
+                </div>
+                <div class="form-row">
+                    <label for="passwd">imię:</label>
+                    <input type="text" name="name" placeholder="Imię" required>
+                </div>
+                <div class="form-row">
+                    <label for="passwd">Nazwisko:</label>
+                    <input type="text" name="surname" placeholder="Nazwisko" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Zrejestruj się</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
     <script src="script.js"></script>
+    <script src="scriptMobile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>
