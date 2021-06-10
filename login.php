@@ -17,7 +17,7 @@
 
     if($value >= 0){
         // zapis
-        $ciastka = Array('email' => $email);
+        $ciastka = Array('email' => $email, 'passwd' => $passwd);
         setcookie('ciastka', serialize($ciastka), time()+3600);
 
         // odczyt zabezpieczony przed nieistniejącym ciasteczkiem
